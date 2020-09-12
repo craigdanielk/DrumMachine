@@ -1,0 +1,128 @@
+<head>
+<!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+<title>African Drum Beats</title
+  </head>
+  <script>
+    function play(str) {
+
+    if (str === 'q' || str === "Q") {
+      document.getElementById('display').innerText = "Wooden Block";
+    } else if (str === "w" || str ==="W") {
+      document.getElementById('display').innerText = "African Drum";
+    } else if (str === "e" || str ==="E") {
+      document.getElementById('display').innerText = "Skaker";
+    } else if (str === "c" || str ==="C") {
+      document.getElementById('display').innerText = "Baby African Drum";
+   } else if (str === "d" || str ==="D") {
+      document.getElementById('display').innerText = "Other African Drum";
+   } else if (str === "s" || str ==="S") {
+      document.getElementById('display').innerText = "Ding";
+   } else if (str === "x" || str ==="X") {
+      document.getElementById('display').innerText = "Small Drum";
+   } else if (str === "z" || str ==="Z") {
+      document.getElementById('display').innerText = "Electric Block";
+   } else if (str === "a" || str ==="A") {
+      document.getElementById('display').innerText = "Boop";
+   }
+
+   var audio = document.getElementById(str);
+   audio.play();
+   }
+
+  window.document.onkeyup = function(event) {
+    let keyStroke = event.key
+    if (keyStroke === "q" || keyStroke === "Q") {
+      play("Q")
+    } else if (keyStroke === "w" || keyStroke ==="W") {
+      play("W");
+    } else if (keyStroke === "e" || keyStroke ==="E") {
+      play("E");
+    } else if (keyStroke === "c" || keyStroke ==="C") {
+     play("C");
+    } else if (keyStroke === "d" || keyStroke ==="D") {
+     play("D");
+    } else if (keyStroke === "s" || keyStroke ==="S") {
+     play("S");
+    } else if (keyStroke === "x" || keyStroke ==="X") {
+     play("X");
+    } else if (keyStroke === "z" || keyStroke ==="Z") {
+     play("Z");
+    } else if (keyStroke === "a" || keyStroke ==="A") {
+     play("A");
+   }
+ }
+
+  </script>
+
+  </head>
+  <body>
+    <div class="container" id="drum-machine">
+  <h1 class="text-center">Drum Machine</h1>
+
+  <div class="card my-3">
+    <div class="card-body"
+     <div class="text-center" id="display">Currently Empty Text</div>
+   </div>
+  </div>
+<div class="text-center ">
+ <button class="drum-pad btn btn-block  btn-danger" id="1" onClick="play('Q')">
+   Q
+   <audio src="./audioClips/Q-onClick.wav" class="clip" id="Q"></audio>
+  </button>
+
+ <button class="drum-pad btn btn-block btn-danger" id="2" onClick="play('W')">
+   W
+   <audio src="./audioClips/W-onClick.wav" class="clip" id="W"></audio>
+  </button>
+
+ <button class="drum-pad btn btn-block btn-danger" id="3"  onClick="play('E')">
+   E
+   <audio src="./audioClips/E-onClick.wav" class="clip" id="E"></audio>
+   </button>
+
+  <button class="drum-pad btn btn-block btn-danger" id="4" onClick="play('A')">
+   A
+    <audio src="./audioClips/A-onClick.wav" class="clip" id="A"></audio>
+   </button>
+
+   <button class="drum-pad btn btn-block btn-danger" id="5" onClick="play('S')">
+   S
+     <audio src="./audioClips/S-onClick.wav" class="clip" id="S"></audio>
+    </button>
+
+  <button class="drum-pad btn btn-block btn-danger" id="6" onClick="play('D')">
+    D
+    <audio src="./audioClips/D-onClick.wav" class="clip" id="D"></audio>
+   </button>
+
+  <button class="drum-pad btn btn-block btn-danger" id="7" onClick="play('Z')">
+     Z
+     <audio src="./audioClips/Z-onClick.wav" class="clip" id="Z"></audio>
+   </button>
+
+    <button class="drum-pad btn btn-block btn-danger" id="8" onClick="play('X')">
+     X
+    <audio src="./audioClips/X-onClick.wav" class="clip" id="X"></audio>
+  </button>
+
+  <button class="drum-pad btn btn-block  btn-danger" id="9" onClick="play('C')">
+   C
+  <audio src="./audioClips/C-onClick.wav" class="clip" id="C"></audio>
+  </button>
+ </div>
+
+
+   <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>
